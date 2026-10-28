@@ -1,0 +1,341 @@
+```html
+<!DOCTYPE html>
+<html lang="hi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Star Inn Hotel & Restaurant | OYO Partner - Chak Molanapur</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#EE2A24', // OYO Red
+              redDark: '#C81E19',
+              gold: '#F59E0B',
+              goldLight: '#FEF3C7',
+              navy: '#0F172A',
+              navyLight: '#1E293B',
+              slateBg: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            heading: ['Outfit', 'sans-serif'],
+            body: ['"Plus Jakarta Sans"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    h1, h2, h3, h4, .font-heading {
+      font-family: 'Outfit', sans-serif;
+    }
+    .hero-gradient {
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.88) 0%, rgba(15, 23, 42, 0.95) 100%);
+    }
+    .oyo-badge-glow {
+      box-shadow: 0 0 20px rgba(238, 42, 36, 0.4);
+    }
+  </style>
+</head>
+<body class="bg-brand-slateBg text-slate-800 antialiased selection:bg-brand-red selection:text-white pb-20 md:pb-0">
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="bg-brand-navy text-white text-xs sm:text-sm py-2 px-4 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-bold bg-brand-red text-white uppercase tracking-wider animate-pulse">
+          Flagship OYO
+        </span>
+        <span class="text-slate-300">Chak Molanapur, Uttar Pradesh (222132)</span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-medium">
+        <span class="text-emerald-400 flex items-center gap-1.5"><i class="fa-solid fa-circle-check"></i> Safe & Couple Friendly Stay</span>
+        <a href="tel:9336931687" class="hover:text-amber-400 font-semibold tracking-wide flex items-center gap-1">
+          <i class="fa-solid fa-phone"></i> +91 9336931687
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION HEADER -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-brand-red to-rose-500 flex items-center justify-center text-white text-2xl font-black shadow-md shadow-red-200">
+          <i class="fa-solid fa-hotel"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-extrabold text-xl sm:text-2xl tracking-tight text-slate-900 group-hover:text-brand-red transition">STAR INN</span>
+            <span class="bg-brand-red text-white text-[11px] font-black px-1.5 py-0.5 rounded shadow-sm tracking-wider">OYO</span>
+          </div>
+          <p class="text-[12px] font-medium text-slate-500 tracking-wide">HOTEL & RESTAURANT</p>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-700">
+        <a href="#rooms" class="hover:text-brand-red transition">Kamre & Rates</a>
+        <a href="#amenities" class="hover:text-brand-red transition">Suvidhayein</a>
+        <a href="#calculator" class="hover:text-brand-red transition">Rate Calculator</a>
+        <a href="#gallery" class="hover:text-brand-red transition">Photos</a>
+        <a href="#location" class="hover:text-brand-red transition">Location</a>
+        <a href="#faq" class="hover:text-brand-red transition">FAQs</a>
+      </nav>
+
+      <!-- Action Buttons -->
+      <div class="hidden sm:flex items-center gap-3">
+        <a href="tel:9336931687" class="px-4 py-2.5 rounded-xl border border-slate-300 text-slate-700 font-bold hover:bg-slate-100 transition flex items-center gap-2 text-sm shadow-sm">
+          <i class="fa-solid fa-phone text-emerald-600"></i> Call Now
+        </a>
+        <a href="https://wa.me/919336931687?text=Namaste!%20Mujhe%20Star%20Inn%20Hotel%20me%20room%20book%20karna%20hai." target="_blank" class="px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold transition flex items-center gap-2 text-sm shadow-lg shadow-emerald-600/20">
+          <i class="fa-brands fa-whatsapp text-lg"></i> Book on WhatsApp
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button onclick="toggleMobileMenu()" class="md:hidden p-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-100">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-slate-200 px-4 py-5 space-y-3 shadow-xl">
+      <a href="#rooms" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base border-b border-slate-100">Rooms & Pricing</a>
+      <a href="#amenities" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base border-b border-slate-100">Suvidhayein (Amenities)</a>
+      <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base border-b border-slate-100">Price Calculator</a>
+      <a href="#gallery" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base border-b border-slate-100">Photo Gallery</a>
+      <a href="#location" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base border-b border-slate-100">Location & Direction</a>
+      <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-800 font-semibold text-base">Frequently Asked Questions</a>
+      
+      <div class="pt-3 grid grid-cols-2 gap-2">
+        <a href="tel:9336931687" class="py-3 text-center bg-slate-100 rounded-xl font-bold text-slate-800 flex items-center justify-center gap-2">
+          <i class="fa-solid fa-phone text-emerald-600"></i> Call
+        </a>
+        <a href="https://wa.me/919336931687?text=Namaste!%20Mujhe%20Star%20Inn%20Hotel%20me%20room%20book%20karna%20hai." target="_blank" class="py-3 text-center bg-emerald-600 rounded-xl font-bold text-white flex items-center justify-center gap-2">
+          <i class="fa-brands fa-whatsapp text-lg"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="relative bg-slate-900 text-white overflow-hidden">
+    <!-- Background Texture with Overlay -->
+    <div class="absolute inset-0 z-0 opacity-30">
+      <div class="w-full h-full bg-cover bg-center" style="background-image: radial-gradient(#334155 1.5px, transparent 1.5px); background-size: 24px 24px;"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-28">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Text Column -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 backdrop-blur-md">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping"></span>
+            <span class="text-xs font-semibold text-slate-300">Rooms Available 24x7 | Chak Molanapur, UP</span>
+          </div>
+
+          <h1 class="font-heading text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+            Aapka Vishwasniya <br class="hidden sm:block">
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-rose-300 to-amber-300">Comfortable & Safe</span> Stay
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+            <strong>Star Inn Hotel & Restaurant</strong> me payein behtareen aur saaf AC aur Non-AC rooms sabse kifayati rates par. 24 ghante customer service, safe mahaul, aur swadisht khana!
+          </p>
+
+          <!-- Price Highlight Badges -->
+          <div class="grid grid-cols-2 sm:grid-cols-2 gap-4 max-w-md mx-auto lg:mx-0 pt-2">
+            <div class="bg-white/10 backdrop-blur-md border border-white/10 p-4 rounded-2xl">
+              <span class="text-xs text-slate-400 uppercase tracking-wider block font-semibold">Standard Non-AC</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class="text-3xl font-extrabold text-amber-400">₹799</span>
+                <span class="text-xs text-slate-300">/ night</span>
+              </div>
+            </div>
+            <div class="bg-brand-red/20 backdrop-blur-md border border-brand-red/40 p-4 rounded-2xl oyo-badge-glow">
+              <span class="text-xs text-red-200 uppercase tracking-wider block font-bold">Deluxe AC Room</span>
+              <div class="flex items-baseline gap-1 mt-1">
+                <span class="text-3xl font-extrabold text-white">₹1,199</span>
+                <span class="text-xs text-slate-300">/ night</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero CTAs -->
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <a href="https://wa.me/919336931687?text=Namaste!%20Mujhe%20Star%20Inn%20Hotel%20me%20room%20book%20karna%20hai." target="_blank" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-center text-base shadow-xl shadow-emerald-500/25 transition duration-200 flex items-center justify-center gap-3">
+              <i class="fa-brands fa-whatsapp text-2xl"></i>
+              <span>Book via WhatsApp</span>
+            </a>
+            <a href="tel:9336931687" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-center text-base transition flex items-center justify-center gap-3">
+              <i class="fa-solid fa-phone text-amber-400"></i>
+              <span>Direct Call: 9336931687</span>
+            </a>
+          </div>
+
+          <!-- Feature tags -->
+          <div class="pt-4 flex flex-wrap items-center justify-center lg:justify-start gap-5 text-xs text-slate-300 font-medium">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-shield-halved text-emerald-400"></i> Couple & Family Safe</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-square-parking text-sky-400"></i> Big Open Parking</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-utensils text-amber-400"></i> Fresh Food Restaurant</span>
+          </div>
+
+        </div>
+
+        <!-- Right Quick Booking Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-white rounded-3xl p-6 sm:p-8 text-slate-900 shadow-2xl border border-slate-100 relative">
+            <div class="absolute -top-3.5 right-6 bg-brand-red text-white text-xs font-black uppercase px-3.5 py-1 rounded-full shadow-md tracking-wider">
+              Instant Confirm
+            </div>
+
+            <div class="mb-6">
+              <h3 class="font-heading text-2xl font-bold text-slate-900">Room Booking Form</h3>
+              <p class="text-xs sm:text-sm text-slate-500 mt-1">Apni detail bharein aur turant WhatsApp par booking confirmation paayein.</p>
+            </div>
+
+            <form id="heroBookingForm" onsubmit="handleFormBooking(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Aapka Naam (Full Name)</label>
+                <div class="relative">
+                  <i class="fa-solid fa-user absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                  <input type="text" id="custName" required placeholder="Jaise: Rajesh Kumar" class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent">
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Mobile Number</label>
+                <div class="relative">
+                  <i class="fa-solid fa-phone absolute left-3.5 top-3.5 text-slate-400 text-sm"></i>
+                  <input type="tel" id="custPhone" required placeholder="10-digit mobile number" class="w-full pl-10 pr-3 py-2.5 rounded-xl border border-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-brand-red focus:border-transparent">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Room Category</label>
+                  <select id="custRoomType" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                    <option value="Non-AC Room (₹799/night)">Non-AC Room (₹799)</option>
+                    <option value="Deluxe AC Room (₹1,199/night)" selected>Deluxe AC Room (₹1,199)</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Number of Guests</label>
+                  <select id="custGuests" class="w-full px-3 py-2.5 rounded-xl border border-slate-200 text-sm font-semibold bg-slate-50 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                    <option value="1 Guest">1 Guest</option>
+                    <option value="2 Guests" selected>2 Guests</option>
+                    <option value="3 Guests">3 Guests</option>
+                    <option value="4+ Guests">Family / Group</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-2 gap-3">
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Check-in Date</label>
+                  <input type="date" id="custCheckIn" required class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                </div>
+                <div>
+                  <label class="block text-xs font-bold text-slate-700 uppercase mb-1">Check-out Date</label>
+                  <input type="date" id="custCheckOut" required class="w-full px-3 py-2 rounded-xl border border-slate-200 text-xs sm:text-sm text-slate-700 focus:outline-none focus:ring-2 focus:ring-brand-red">
+                </div>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-4 rounded-xl bg-brand-red hover:bg-brand-redDark text-white font-bold text-sm tracking-wide shadow-lg shadow-red-500/25 transition duration-200 flex items-center justify-center gap-2">
+                <span>Check Availability & Send on WhatsApp</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </button>
+            </form>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-medium">
+              <span><i class="fa-solid fa-clock-rotate-left text-brand-red"></i> 24x7 Check-in</span>
+              <span><i class="fa-solid fa-ban text-emerald-600"></i> No Advance for Enquiry</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUICK STATS BAR -->
+  <section class="bg-white border-b border-slate-200 py-6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="p-2">
+          <div class="text-3xl font-heading font-black text-brand-red">24x7</div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Reception & Room Service</p>
+        </div>
+        <div class="p-2 border-l border-slate-100">
+          <div class="text-3xl font-heading font-black text-slate-900">₹799<span class="text-base font-normal text-slate-500">+</span></div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Budget Friendly Rates</p>
+        </div>
+        <div class="p-2 border-l border-slate-100">
+          <div class="text-3xl font-heading font-black text-emerald-600">100%</div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Safe Couple & Family Stay</p>
+        </div>
+        <div class="p-2 border-l border-slate-100">
+          <div class="text-3xl font-heading font-black text-amber-500">Free</div>
+          <p class="text-xs sm:text-sm font-semibold text-slate-600 mt-1">Large Open Parking Space</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS & PRICING SECTION -->
+  <section id="rooms" class="py-16 sm:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-2xl mx-auto mb-14">
+      <span class="text-xs font-bold text-brand-red uppercase tracking-wider bg-red-50 px-3 py-1 rounded-full">Best Room Deals</span>
+      <h2 class="font-heading text-3xl sm:text-4xl font-black text-slate-900 mt-2">Humare Rooms & Suvidhayein</h2>
+      <p class="text-slate-600 text-sm sm:text-base mt-2">Chak Molanapur me sabse clean, sanitized aur pocket-friendly rooms.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+      
+      <!-- Room 1: Non-AC -->
+      <div class="bg-white rounded-3xl border border-slate-200 overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between">
+        <div>
+          <!-- Visual Header -->
+          <div class="relative h-56 bg-slate-800 overflow-hidden">
+            <!-- Simulated Room Graphic -->
+            <div class="w-full h-full bg-gradient-to-t from-slate-950 via-slate-800 to-slate-700 flex flex-col justify-end p-6 text-white">
+              <span class="bg-slate-700/80 backdrop-blur-md text-slate-200 text-xs font-bold px-3 py-1 rounded-md w-max mb-2">Economy Comfort</span>
+              <h3 class="font-heading text-2xl font-extrabold">Standard Non-AC Room</h3>
+              <p class="text-xs text-slate-300">Aramdayak stay budget travelers ke liye</p>
+            </div>
+            <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-slate-900 shadow">
+              <i class="fa-solid fa-wind text-sky-500 mr-1"></i> Airy & Ventilated
+            </div>
+          </div>
+
+          <!-- Room Details Body -->
+          <div class="p-6 sm:p-8 space-y-6">
+            <div class="flex items-baseline justify-between border-b border-slate-100 pb-5">
+              <div>
+                <span class="text-xs text-slate-500 font-semibold block">Price Per Night</span>
+                <span class="text-4xl font-black text-slate-900 font-heading">₹799</span>
+                <span class="text-xs text-slate-500 font-medium ml-1">/ 
